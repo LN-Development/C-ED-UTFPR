@@ -1,0 +1,124 @@
+Escreva um programa em C que deve ler do usu´ario uma sequˆencia de comandos, onde cada comando
+pode ser:
+
+  • comeca S E: come¸ca a s´erie de nome S que tem E epis´odios ao todo. Ao ler este comando, seu programa
+    deve imprimir a linha comecando S;
+    
+  • download N T: baixa N epis´odios da s´erie que estiver assistindo no momento, com T minutos cada
+    um. Ao ler este comando, seu programa deve imprimir a linha N eps de S baixados, sendo S a s´erie
+    baixada. Se N for maior que o n´umero de epis´odios da s´erie que faltam baixar, todos os epis´odios que
+    faltam baixar s˜ao baixados;
+    
+  • assiste N: assiste N epis´odios da s´erie que estiver assistindo no momento. Ao ler este comando, seu
+    programa deve imprimir a linha N eps de S assistidos (T minutos), sendo S a s´erie assistida, e T
+    o tempo total assistido. Se N for maior que o n´umero de epis´odios baixados mas ainda n˜ao assistidos
+    da série, todos os episódios baixados da série são assistidos;
+    
+  • F: termina a execução do programa.
+  
+ - Quando uma série termina, seu programa deve imprimir a linha acabou S, sendo S a s´erie que terminou.
+ 
+ - Além disso, ao terminar a execu¸c˜ao, seu programa deve imprimir -- seguido de uma linha para cada s´erie que
+  não foi terminada, contendo S: faltam baixar E eps e assistir A eps, sendo S a s´erie n˜ao terminada
+  e E (respectivamente A) o n´umero de epis´odios que faltaram ser baixados (espectivamente assistidos).
+  
+ - O exemplo de entrada e sa´ıda abaixo descreve o exemplo dado no in´ıcio do enunciado:
+ 
+ 
+ 
+ 
+--Exemplo de entrada--
+ 
+ 
+comeca cadernoquemata 37
+download 5 20
+assiste 3
+comeca pirataqueestica 1053
+download 5 20
+assiste 3
+download 3 30
+assiste 3
+comeca filhodohokage 4
+download 4 25
+assiste 4
+assiste 2
+assiste 3
+download 15 20
+assiste 3
+F
+
+
+--Exemplo de saida--
+
+comecando cadernoquemata
+5 eps de cadernoquemata baixados
+3 eps de cadernoquemata assistidos (60 minutos)
+comecando pirataqueestica
+5 eps de pirataqueestica baixados
+3 eps de pirataqueestica assistidos (60 minutos)
+3 eps de pirataqueestica baixados
+3 eps de pirataqueestica assistidos (70 minutos)
+comecando filhodohokage
+4 eps de filhodohokage baixados
+4 eps de filhodohokage assistidos (100 minutos)
+acabou filhodohokage
+2 eps de pirataqueestica assistidos (60 minutos)
+0 eps de pirataqueestica assistidos (0 minutos)
+15 eps de pirataqueestica baixados
+3 eps de pirataqueestica assistidos (60 minutos)
+---
+pirataqueestica: faltam baixar 1030 eps e assistir 1042 eps
+cadernoquemata: faltam baixar 32 eps e assistir 34 ep
+
+Implementa¸c˜ao
+
+O trabalho deve obrigatoriamente usar pilha(s) e fila(s) em sua solu¸c˜ao. O trabalho deve conter os seguintes
+arquivos:
+
+• PE.h e PE.c: defini¸c˜ao e implementa¸c˜ao de uma pilha usando como base um vetor (“pilha est´atica”);
+
+• PD.h e PD.c: defini¸c˜ao e implementa¸c˜ao de uma pilha usa ndo como base uma lista ligada (“pilha
+dinˆamica”);
+
+• FE.h e FE.c: defini¸c˜ao e implementa¸c˜ao de uma fila usando como base um vetor (“fila est´atica”);
+
+• FD.h e FD.c: defini¸c˜ao e implementa¸c˜ao de uma fila usando como base uma lista ligada (“fila dinˆamica”);
+
+• main.c: programa principal. Deve incluir (via #include):
+
+– PE.h ou PD.h; e
+
+– FE.h ou FD.h.
+
+O programa principal deve utilizar filas e pilhas como estruturas abstratas de dados. Em particular, deve
+ser poss´ıvel “escolher” entre usar pilhas est´aticas ou dinˆamicas apenas alterando os #include e recompilando
+de acordo! Da mesma forma, deve ser poss´ıvel “escolher” entre usar filas est´aticas ou dinˆamicas de maneira
+an´aloga (note que, desta forma, h´a um total de quatro “configura¸c˜oes” com as quais o trabalho dever´a
+funcionar).
+
+Independentemente da implementa¸c˜ao, certifique-se que toda mem´oria alocada por seu programa ´e desalocada ao final da sua execu¸c˜ao.
+Orienta¸c˜oes
+
+• O trabalho pode ser feito por equipes de at´e 2 (dois) estudantes;
+
+• Submeta, via Moodle, um pacote (zip ou tar.gz) contendo os 9 arquivos citados acima, al´em de um
+arquivo de texto (txt) onde conste:
+
+– O nome de todos os integrantes da equipe;
+
+– Toda informa¸c˜ao que a equipe julgar relevante para a corre¸c˜ao (como bugs conhecidos, detalhes
+de implementa¸c˜ao, escolhas de projeto, etc.)
+
+• Idente e comente adequadamente seus c´odigos para facilitar a corre¸c˜ao.
+
+• Aten¸c˜ao: a corre¸c˜ao ser´a parcialmente automatizada, e a sa´ıda do programa ser´a testada com outras
+entradas al´em das fornecidas como exemplo. Siga fielmente o formato de sa´ıda dado nos exemplos,
+sob pena de grande redu¸c˜ao da nota;
+• Certifique-se que seu programa compila e funciona antes de submetˆe-lo;
+
+• O trabalho deve ser entregue at´e 21 de Maio de 2023, 23:59, apenas via Moodle. Trabalhos entregues
+por outros meios ou fora do prazo n˜ao ser˜ao aceitos. E suficiente que o trabalho seja submetido por ´
+apenas um estudante da equipe;
+
+• Trabalhos detectados como c´opia, pl´agio ou comprados receber˜ao todos a nota 0 (ZERO) e estar˜ao
+sujeitos a abertura de Processo Administrativo Disciplinar Discente.
