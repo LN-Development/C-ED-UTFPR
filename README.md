@@ -1,2 +1,2 @@
 # C-ED-UTFPR
-Repositório trabalhos Estrutura de Dados 1/23
+Repositório trabalhos Estrutura de Dados
